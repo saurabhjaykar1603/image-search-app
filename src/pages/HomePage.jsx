@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Grid, TextField, Typography } from "@mui/material";
 import Pagination from "@mui/material/Pagination";
 import { searchImages } from "./../services/unsplashService"; // Import your API service
+import { Link } from "react-router-dom";
 
 const HomeScreen = () => {
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
   const [images, setImages] = useState([]);
   const [totalPages, setTotalPages] = useState(1);
-  const imagesPerPage = 6;
 
   const handleSearch = async () => {
     setPage(1);
@@ -57,11 +57,13 @@ const HomeScreen = () => {
                 overflow: "hidden",
               }}
             >
+              <Link to={`details/${image.id}`}>
               <img
                 src={image.urls.regular}
                 alt={image.alt_description}
                 style={{ width: "100%", height: "200px", objectFit: "cover" }}
-              />
+                />
+                </Link>
               <div>
                 <Typography variant="h6">
                   {image.description || "No description"}

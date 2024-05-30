@@ -23,17 +23,14 @@ const api = axios.create({
     }
   };
   
-  export const getRandomImages = async (count) => {
+  export const getRandomImagebyId = async (id) => {
     try {
-      const response = await api.get('/photos/random', {
-        params: {
-          count,
-        },
-      });
+      const response = await api.get(`/photos/${id}`);
       return response.data;
     } catch (error) {
       console.error('Error fetching random images:', error);
       throw error;
     }
   };
+  
   
