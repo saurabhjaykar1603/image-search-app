@@ -1,12 +1,18 @@
-import { Box } from '@mui/material'
-import React from 'react'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import DetailsPage from './pages/DetailsPage';
+import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <Box>
-      
-    </Box>
-  )
-}
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/details" element={<DetailsPage />} />
+      </Routes>
+    </div>
+  );
+};
 
-export default App
+export default App;
