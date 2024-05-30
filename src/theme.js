@@ -2,25 +2,21 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   typography: {
-    fontFamily: 'Arial, sans-serif',
-    fontSize: 14,
-    fontWeightLight: 300,
-    fontWeightRegular: 400,
-    fontWeightMedium: 500,
-    fontWeightBold: 700,
+    fontFamily: 'Inter, sans-serif',
     h1: {
-      fontSize: '2rem',
-      fontWeight: 700,
+      fontSize: '30px',
+      fontWeight: 600,
+      lineHeight: '38px',
     },
     h2: {
-      fontSize: '1.75rem',
-      fontWeight: 500,
+      fontSize: '16px',
+      fontWeight: 600,
+      lineHeight: '24px',
     },
     body1: {
-      fontSize: '1rem',
-    },
-    body2: {
-      fontSize: '0.875rem',
+      fontSize: '14px',
+      fontWeight: 400,
+      lineHeight: '20px',
     },
   },
   breakpoints: {
